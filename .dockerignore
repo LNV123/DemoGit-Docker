@@ -1,0 +1,10 @@
+# Bỏ qua các tệp không cần thiết khi build image
+.git
+.vscode
+.gemini
+node_modules
+Dockerfile
+.dockerignore
+package-lock.json
+package.json
+profile_avatar_placeholder*.png

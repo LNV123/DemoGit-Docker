@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lê Ngọc Vũ - Giới thiệu bản thân</title>
+    <meta name="description" content="Khám phá trang cá nhân của Lê Ngọc Vũ - Một sinh viên năng động đến từ Ninh Thuận, đam mê công nghệ và sáng tạo.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="card">
+        <div class="profile-header">
+            <div class="profile-img">
+                <img src="avatar.png" alt="Profile avatar Lê Ngọc Vũ">
+                <!-- If avatar.png doesn't load/exist, fallback icon could be here, but we've copied it -->
+            </div>
+            <h1>Lê Ngọc Vũ</h1>
+            <span class="tagline">Học viên & Đam mê Công nghệ</span>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-item" id="birthday-info">
+                <i class="fa-solid fa-cake-candles"></i>
+                <div class="info-content">
+                    <span class="label">Ngày sinh</span>
+                    <span class="value">15/07/2004</span>
+                </div>
+            </div>
+            <div class="info-item" id="location-info">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="info-content">
+                    <span class="label">Quê quán</span>
+                    <span class="value">Ninh Thuận</span>
+                </div>
+            </div>
+            <div class="info-item" id="education-info">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div class="info-content">
+                    <span class="label">Định hướng</span>
+                    <span class="value">Lập trình viên Full-stack</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="interests">
+            <h2>Sở thích của tôi</h2>
+            <div class="tags">
+                <span class="tag">💻 Lập trình</span>
+                <span class="tag">📸 Chụp ảnh</span>
+                <span class="tag">🎵 Nghe nhạc</span>
+                <span class="tag">✈️ Du lịch</span>
+                <span class="tag">⚽ Bóng đá</span>
+                <span class="tag">🎮 Gaming</span>
+                <span class="tag">🎬 Xem phim</span>
+            </div>
+        </div>
+
+        <div class="socials">
+            <a href="#" class="social-icon" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="social-icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="social-icon" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </main>
+
+    <!-- Simple micro-interaction scripts -->
+    <script>
+        document.querySelectorAll('.tag').forEach(tag => {
+            tag.addEventListener('mouseenter', () => {
+                const colors = ['#00d2ff', '#ff0080', '#7928ca', '#f9d423'];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                tag.style.boxShadow = `0 0 15px ${randomColor}`;
+            });
+            tag.addEventListener('mouseleave', () => {
+                tag.style.boxShadow = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
